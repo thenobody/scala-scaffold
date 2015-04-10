@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-4.1.xsd">
+
+    <bean id="hikariDataSource" class="net.thenobody.scaffold.rdbms.HikariDataSourceProvider" factory-method="getDataSource">
+        <constructor-arg index="0" ref="configuration" />
+    </bean>
+
+    <alias name="hikariDataSource" alias="dataSource" />
+
+    <bean id="databaseProvider" class="net.thenobody.scaffold.utils.MySqlDatabaseProvider">
+        <constructor-arg index="0" ref="hikariDataSource" />
+    </bean>
+
+    <bean id="userService" class="net.thenobody.scaffold.service.MySqlUserService">
+        <constructor-arg index="0" ref="databaseProvider" />
+    </bean>
+</beans>

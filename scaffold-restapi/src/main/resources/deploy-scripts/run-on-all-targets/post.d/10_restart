@@ -1,0 +1,5 @@
+#!/bin/sh
+ 
+appname="scaffold-restapi"
+ 
+/etc/init.d/$appname restart

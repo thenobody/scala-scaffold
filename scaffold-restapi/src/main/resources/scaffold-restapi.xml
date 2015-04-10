@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-4.1.xsd">
+
+    <bean id="configuration" class="net.thenobody.scaffold.utils.Configuration" factory-method="getConfig">
+        <constructor-arg index="0" value="/etc/scaffold-restapi/config.properties" />
+    </bean>
+
+    <import resource="classpath:scaffold-core.xml" />
+
+    <bean id="usersUtil" class="net.thenobody.scaffold.restapi.service.util.users.UsersUtil">
+        <constructor-arg index="0" ref="userService" />
+    </bean>
+</beans>
