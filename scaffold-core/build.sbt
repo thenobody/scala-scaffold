@@ -2,7 +2,7 @@ name := "scaffold-core"
 
 libraryDependencies ++= Seq(
   "io.spray" %%  "spray-json" % "1.3.1",
-  "redis.clients" % "jedis" % "2.6.1-VDNA",
+  "redis.clients" % "jedis" % "2.7.0",
   "com.typesafe.slick" %% "slick" % "2.1.0",
   "org.springframework" % "spring-context" % "4.1.1.RELEASE",
   "com.zaxxer" % "HikariCP-java6" % "2.2.4",
