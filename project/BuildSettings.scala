@@ -1,5 +1,5 @@
 import MavenSettings._
-import net.imagini.sbt.ReleaseExtra._
+import ReleaseExtra._
 import sbt.Keys._
 import sbt._
 import sbtassembly.Plugin.AssemblyKeys._

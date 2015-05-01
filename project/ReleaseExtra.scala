@@ -1,5 +1,3 @@
-package net.imagini.sbt
-
 import sbt._
 import sbtrelease.ReleasePlugin.ReleaseKeys._
 import sbtrelease._
